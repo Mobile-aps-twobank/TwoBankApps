@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bghome"
-    tools:context=".HomeActivity">
+    tools:context=".MainActivity">
 
 
     <ImageButton
@@ -27,6 +27,7 @@
         android:layout_marginTop="640dp"
         android:backgroundTint="@android:color/transparent"
         android:src="@drawable/btn_signin"
+        android:onClick="signInButtonClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
