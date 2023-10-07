@@ -3,5 +3,7 @@
     <style name="Base.Theme.TwoBank" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#1F2535</item>
+        <item name="android:windowBackground">#1F2535</item>
     </style>
 </resources>
