@@ -82,7 +82,6 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sign Up Failed", Toast.LENGTH_SHORT).show();
         }
-
         db.close();
     }
 }
