@@ -1,8 +1,10 @@
-// User.java
+package com.kelompok8.twobank;
+
 public class User {
     private int id;
     private String username;
     private String email;
+    private String norek;
     private String password;
 
     // Konstruktor
@@ -10,9 +12,10 @@ public class User {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(String username, String email, String password) {
+    public User(String username, String email, String norek, String password) {
         this.username = username;
         this.email = email;
+        this.norek = norek;
         this.password = password;
     }
 
@@ -39,6 +42,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getNorek() {
+        return norek;
+    }
+
+    public void setNorek(String norek) {
+        this.norek = norek;
     }
 
     public String getPassword() {

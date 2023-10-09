@@ -63,11 +63,11 @@
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
-        android:hint="Username"
+        android:hint="Email"
         android:fontFamily="@font/intermedium"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -77,14 +77,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textaja" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
         android:hint="*****"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
@@ -94,7 +94,7 @@
         android:id="@+id/relative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp">
@@ -110,22 +110,35 @@
         <TextView
             android:id="@+id/forgotPasswordText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Forgot Password?"
             android:textColor="#0000FF"
             android:layout_toEndOf="@+id/rememberMeCheckbox"
             android:layout_centerVertical="true" />
     </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="572dp"
-        android:backgroundTint="@android:color/transparent"
-        android:src="@drawable/btnsignin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+<!--    <ImageButton-->
+<!--        android:id="@+id/btnSignIn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="572dp"-->
+<!--        android:backgroundTint="@android:color/transparent"-->
+<!--        android:src="@drawable/btnsignin"-->
+<!--        android:contentDescription="Tombol Login"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:text="Sign In"
+        android:textSize="12pt"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/relative"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

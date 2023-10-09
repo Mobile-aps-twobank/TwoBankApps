@@ -14,6 +14,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void signUpButtonClick(View view) {
+        // Intent untuk mengarahkan ke LoginActivity
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
     public void signInButtonClick(View view) {
         // Intent untuk mengarahkan ke LoginActivity
         Intent intent = new Intent(this, LoginActivity.class);
