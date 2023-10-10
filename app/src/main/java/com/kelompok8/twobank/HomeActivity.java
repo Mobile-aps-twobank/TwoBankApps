@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (itemId == R.id.menu_item_1) {
                     // Item pertama (HomeActivity) tidak perlu melakukan apa-apa karena kita sudah berada di sana
                 } else if (itemId == R.id.menu_item_2) {
-                    Intent intent = new Intent(HomeActivity.this, TransaksiActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, SaldoActivity.class);
                     startActivity(intent);
                 } else if (itemId == R.id.menu_item_3) {
                     Intent intent = new Intent(HomeActivity.this, ScanActivity.class);
