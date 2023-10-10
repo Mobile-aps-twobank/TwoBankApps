@@ -22,17 +22,6 @@ public class HomeActivity extends AppCompatActivity {
         // Set the initial selected item
         bottomNavigationView.setSelectedItemId(R.id.menu_item_1);
 
-
-        // Floating Action Button
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Lakukan tindakan yang sesuai saat FAB diklik
-                // Contoh: Tampilkan pesan Toast
-                Toast.makeText(HomeActivity.this, "FAB Clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
