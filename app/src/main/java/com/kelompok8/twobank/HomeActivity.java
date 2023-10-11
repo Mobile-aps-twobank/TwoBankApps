@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Lakukan tindakan yang sesuai saat FAB diklik
-                // Contoh: Tampilkan Pesan Toast
+                // Contoh: Tampilkan pesan Toast
                 Toast.makeText(HomeActivity.this, "FAB Clicked", Toast.LENGTH_SHORT).show();
             }
         });
