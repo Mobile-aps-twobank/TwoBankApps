@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,17 +23,16 @@ public class HomeActivity extends AppCompatActivity {
         // Set the initial selected item
         bottomNavigationView.setSelectedItemId(R.id.menu_item_1);
 
-
         // Floating Action Button
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Lakukan tindakan yang sesuai saat FAB diklik
-                // Contoh: Tampilkan pesan Toast
-                Toast.makeText(HomeActivity.this, "FAB Clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Lakukan tindakan yang sesuai saat FAB diklik
+//                // Contoh: Tampilkan pesan Toast
+//                Toast.makeText(HomeActivity.this, "FAB Clicked", Toast.LENGTH_SHORT).show();
+//            }
+//        });
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -40,9 +40,10 @@ public class HomeActivity extends AppCompatActivity {
                 int itemId = item.getItemId();
 
                 if (itemId == R.id.menu_item_1) {
-                    // Item pertama (HomeActivity) tidak perlu melakukan apa-apa karena kita sudah berada di sana
+//                    Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+//                    startActivity(intent);
                 } else if (itemId == R.id.menu_item_2) {
-                    Intent intent = new Intent(HomeActivity.this, TransaksiActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, SaldoActivity.class);
                     startActivity(intent);
                 } else if (itemId == R.id.menu_item_3) {
                     Intent intent = new Intent(HomeActivity.this, ScanActivity.class);

@@ -3,13 +3,16 @@ package com.kelompok8.twobank;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,7 +29,36 @@ public class SaldoActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Set the initial selected item
+        bottomNavigationView.setSelectedItemId(R.id.menu_item_5);
+
+        // Temukan tombol "Back" ImageView
+        ImageView backButton = findViewById(R.id.backButton);
+
+        // Menambahkan OnClickListener pada ImageView
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Kembali ke MainActivity
+                Intent intent = new Intent(SaldoActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish(); // Untuk menutup RegisterActivity
+            }
+        });
+
+        // Set the initial selected item
         bottomNavigationView.setSelectedItemId(R.id.menu_item_2);
+
+        // Mengambil data nama pengguna dan nomor rekening dari SharedPreferences
+        SharedPreferences sharedPref = getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        String username = sharedPref.getString("USERNAME", "");
+        String norek = sharedPref.getString("NOMOR_REKENING", "");
+
+        // Menampilkan nama pengguna dan nomor rekening di TextView
+        TextView userText = findViewById(R.id.userText);
+        userText.setText(username);
+
+        TextView norekText = findViewById(R.id.norekText);
+        norekText.setText(norek);
 
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,6 +70,7 @@ public class SaldoActivity extends AppCompatActivity {
                     Intent intent = new Intent(SaldoActivity.this, HomeActivity.class);
                     startActivity(intent);
                 } else if (itemId == R.id.menu_item_2) {
+                    // Aktivitas Saldo sedang aktif, tidak perlu tindakan tambahan
                 } else if (itemId == R.id.menu_item_3) {
                     Intent intent = new Intent(SaldoActivity.this, ScanActivity.class);
                     startActivity(intent);

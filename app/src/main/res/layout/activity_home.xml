@@ -9,7 +9,19 @@
 
     <!-- Your main content layout goes tes here -->
 
+
     <!-- Floating Action Button -->
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Ini Halaman Home"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
