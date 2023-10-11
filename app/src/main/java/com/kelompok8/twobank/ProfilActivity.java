@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,10 +19,24 @@ public class ProfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profil);
 
 
+        // Temukan tombol "Back" ImageView
+        ImageView backButton = findViewById(R.id.backButton);
+
+        // Menambahkan OnClickListener pada ImageView
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Kembali ke MainActivity
+                Intent intent = new Intent(ProfilActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // Untuk menutup LoginActivity
+            }
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Set the initial selected item
-        bottomNavigationView.setSelectedItemId(R.id.menu_item_1);
+        bottomNavigationView.setSelectedItemId(R.id.menu_item_5);
 
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
