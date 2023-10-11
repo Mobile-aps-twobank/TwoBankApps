@@ -102,6 +102,9 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 if (updateSuccess) {
                     Toast.makeText(EditProfileActivity.this, "Profil berhasil diperbarui", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(EditProfileActivity.this, ProfilActivity.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(EditProfileActivity.this, "Gagal memperbarui profil", Toast.LENGTH_SHORT).show();
                 }

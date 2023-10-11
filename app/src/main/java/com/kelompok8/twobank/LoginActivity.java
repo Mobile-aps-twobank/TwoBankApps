@@ -107,8 +107,6 @@ public class LoginActivity extends AppCompatActivity {
 
             // Pindah ke SaldoActivity
             Intent saldoIntent = new Intent(LoginActivity.this, SaldoActivity.class);
-//            saldoIntent.putExtra("USERNAME", username); // Mengirim nama pengguna ke SaldoActivity
-//            saldoIntent.putExtra("NOMOR_REKENING", norek); // Mengirim nomor rekening ke SaldoActivity
             startActivity(saldoIntent);
 
 

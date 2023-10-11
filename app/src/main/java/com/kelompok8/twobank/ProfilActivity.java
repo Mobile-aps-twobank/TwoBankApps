@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -69,6 +70,16 @@ public class ProfilActivity extends AppCompatActivity {
             }
         });
 
+        // Area Logout ketike di Klik
+        LinearLayout logoutButton = findViewById(R.id.logout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                // Lakukan proses Logout
+                logout();
+            }
+        });
+
 
         // Menampilkan nama pengguna dan nomor rekening di Page Profile
         TextView namaTextView = findViewById(R.id.namaTextView);
@@ -107,5 +118,14 @@ public class ProfilActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void logout() {
+        Toast.makeText(ProfilActivity.this, "Logout Success", Toast.LENGTH_SHORT).show();
+
+        // Pindah kembali ke halaman Login setelah logout
+        Intent intent = new Intent(ProfilActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish(); // Untuk menutup ProfilActivity
     }
 }
