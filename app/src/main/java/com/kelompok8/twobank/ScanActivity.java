@@ -19,7 +19,7 @@ public class ScanActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Set the initial selected item
-        bottomNavigationView.setSelectedItemId(R.id.menu_item_4);
+        bottomNavigationView.setSelectedItemId(R.id.menu_item_3);
 
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -34,8 +34,6 @@ public class ScanActivity extends AppCompatActivity {
                     Intent intent = new Intent(ScanActivity.this, SaldoActivity.class);
                     startActivity(intent);
                 } else if (itemId == R.id.menu_item_3) {
-                    Intent intent = new Intent(ScanActivity.this, ScanActivity.class);
-                    startActivity(intent);
                 } else if (itemId == R.id.menu_item_4) {
                     Intent intent = new Intent(ScanActivity.this, NotifikasiActivity.class);
                     startActivity(intent);
