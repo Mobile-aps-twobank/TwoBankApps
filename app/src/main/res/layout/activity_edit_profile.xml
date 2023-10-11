@@ -50,69 +50,114 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/usernameaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Edit Username"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <LinearLayout
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/usernameaja"
+        android:layout_marginTop="2dp">
+
 
         <EditText
             android:id="@+id/editText_username"
             android:layout_width="0dp"
             android:layout_height="58dp"
             android:layout_weight="1"
+            android:textColor="@color/dark"
             android:hint="Edit Username"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
             android:paddingEnd="16dp"
             android:background="@drawable/bgform" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/emailaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Edit Email"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
     <LinearLayout
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/emailaja"
+        android:layout_marginTop="2dp">
 
         <EditText
             android:id="@+id/editText_email"
             android:layout_width="0dp"
             android:layout_height="58dp"
             android:layout_weight="1"
+            android:textColor="@color/dark"
             android:hint="Edit Email"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
             android:paddingEnd="16dp"
             android:background="@drawable/bgform" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/passwordaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Edit Email"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <LinearLayout
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/passwordaja"
+        android:layout_marginTop="2dp">
 
         <EditText
             android:id="@+id/editText_password"
             android:layout_width="0dp"
             android:layout_height="58dp"
             android:layout_weight="1"
+            android:textColor="@color/dark"
             android:hint="Edit Password"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
