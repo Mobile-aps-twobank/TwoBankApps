@@ -62,20 +62,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
+    <TextView
+        android:id="@+id/emailaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Email"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textaja" />
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
-        android:layout_marginTop="16dp"
-        android:hint="Email"
+        android:layout_marginTop="2dp"
+        android:hint="name@gmail.com"
+        android:textColor="@color/dark"
         android:fontFamily="@font/intermedium"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textaja" />
+        app:layout_constraintTop_toBottomOf="@+id/emailaja" />
 
+    <TextView
+        android:id="@+id/passwordaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Password"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="337dp"
@@ -83,12 +106,13 @@
         android:hint="*****"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:textColor="@color/dark"
         android:background="@drawable/bgform"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordaja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="2dp" />
 
     <RelativeLayout
         android:id="@+id/relative"

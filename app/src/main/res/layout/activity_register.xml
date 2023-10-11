@@ -39,7 +39,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="180dp"
         android:fontFamily="@font/interblack"
         android:text="Register Account"
         android:textAlignment="viewStart"
@@ -54,7 +54,7 @@
         android:id="@+id/textaja"
         android:layout_width="337dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="@font/intermedium"
         android:text="Fill in the information to complate  the Register"
         android:textColor="#1F2535"
@@ -62,60 +62,110 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
+    <TextView
+        android:id="@+id/usernameaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Username"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textaja" />
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="2dp"
         android:hint="Username"
+        android:textColor="@color/dark"
         android:fontFamily="@font/intermedium"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textaja" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameaja" />
+
+    <TextView
+        android:id="@+id/emailaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Email"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText" />
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
         android:hint="name@email.com"
         android:paddingStart="16dp"
+        android:textColor="@color/dark"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
-        app:layout_constraintTop_toBottomOf="@+id/usernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailaja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="2dp" />
 
+    <TextView
+        android:id="@+id/norekaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="No. rekening"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
     <EditText
         android:id="@+id/norekEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
         android:hint="No Rekening"
+        android:textColor="@color/dark"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/norekaja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="2dp" />
 
+
+    <TextView
+        android:id="@+id/passwordaja"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/interblack"
+        android:text="Password"
+        android:textColor="#1F2535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/norekEditText" />
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="337dp"
         android:layout_height="58dp"
         android:hint="*****"
+        android:textColor="@color/dark"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:background="@drawable/bgform"
-        app:layout_constraintTop_toBottomOf="@+id/norekEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordaja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="2dp" />
 
     <RelativeLayout
         android:id="@+id/relative"
@@ -124,12 +174,12 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="2dp">
 
         <CheckBox
             android:id="@+id/rememberMeCheckbox"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="30dp"
             android:text="Remember Me"
             android:layout_marginEnd="74dp"
             android:layout_centerVertical="true" />
