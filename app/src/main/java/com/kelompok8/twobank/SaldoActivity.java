@@ -26,7 +26,7 @@ public class SaldoActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Set the initial selected item
-        bottomNavigationView.setSelectedItemId(R.id.menu_item_1);
+        bottomNavigationView.setSelectedItemId(R.id.menu_item_2);
 
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
