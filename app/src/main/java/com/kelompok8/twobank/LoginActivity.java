@@ -1,6 +1,7 @@
 package com.kelompok8.twobank;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText emailEditText, passwordEditText;
     private Button loginButton;
     private DatabaseHelper databaseHelper;
+    private static final String PREFS_NAME = "MyData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +87,31 @@ public class LoginActivity extends AppCompatActivity {
         if (cursor.moveToFirst()) {
             // Login berhasil
             String username = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_USERNAME));
+            String norek = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_NOREK));
+
+            // Menyimpan data sesi ke SharedPreferences
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+            SharedPreferences.Editor editor = settings.edit();
+            char[] id = new char[0];
+            editor.putString("id", String.valueOf(id)); // id disimpan sebagai string
+            editor.putString("username", username);
+            editor.putString("email", email);
+            editor.putString("norek", norek);
+            editor.putString("password", password);
+
+            // Menyimpan perubahan
+            editor.apply();
+
+
             Toast.makeText(this, "Login Success, " + username, Toast.LENGTH_SHORT).show();
 
-            // Pindah Halaman Ketika Berhasil Login
-            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-            startActivity(intent);
+            // Pindah ke SaldoActivity
+            Intent saldoIntent = new Intent(LoginActivity.this, SaldoActivity.class);
+//            saldoIntent.putExtra("USERNAME", username); // Mengirim nama pengguna ke SaldoActivity
+//            saldoIntent.putExtra("NOMOR_REKENING", norek); // Mengirim nomor rekening ke SaldoActivity
+            startActivity(saldoIntent);
+
+
         } else {
             // Login gagal
             Toast.makeText(this, "Login Failed. Periksa Email dan Password.", Toast.LENGTH_SHORT).show();

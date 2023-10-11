@@ -7,18 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class EditProfileActivity extends AppCompatActivity {
 
+    private EditText usernameEditText, emailEditText, passwordEditText;
+    private DatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-
-
 
         // Temukan tombol "Back" ImageView
         ImageView backButton = findViewById(R.id.backButton);
@@ -33,6 +35,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 finish(); // Untuk menutup LoginActivity
             }
         });
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -64,4 +67,5 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
     }
+
 }
