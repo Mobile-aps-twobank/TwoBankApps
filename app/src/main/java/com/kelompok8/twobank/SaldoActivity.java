@@ -20,11 +20,16 @@ public class SaldoActivity extends AppCompatActivity {
 
     private EditText amountEditText;
     private ImageView eyeIcon;
+    private TextView userText, norekText;
+    private DatabaseHelper databaseHelper;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saldo);
+
+        databaseHelper = new DatabaseHelper(this);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -48,17 +53,18 @@ public class SaldoActivity extends AppCompatActivity {
         // Set the initial selected item
         bottomNavigationView.setSelectedItemId(R.id.menu_item_2);
 
-        // Mengambil data nama pengguna dan nomor rekening dari SharedPreferences
-        SharedPreferences sharedPref = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        String username = sharedPref.getString("USERNAME", "");
-        String norek = sharedPref.getString("NOMOR_REKENING", "");
 
         // Menampilkan nama pengguna dan nomor rekening di TextView
         TextView userText = findViewById(R.id.userText);
-        userText.setText(username);
-
         TextView norekText = findViewById(R.id.norekText);
-        norekText.setText(norek);
+
+        user = databaseHelper.getUser();
+
+        // Tampilkan Data berdasarkan User yang Login
+        if (user != null){
+            userText.setText(user.getUsername());
+            norekText.setText(user.getNorek());
+        }
 
         // Handle item clicks
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

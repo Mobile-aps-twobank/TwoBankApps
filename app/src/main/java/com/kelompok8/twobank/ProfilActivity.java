@@ -9,15 +9,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfilActivity extends AppCompatActivity {
 
+    private TextView namaTextView, rekeningTextView;
+    private DatabaseHelper databaseHelper;
+    private User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
+
+        databaseHelper = new DatabaseHelper(this);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -61,6 +68,19 @@ public class ProfilActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        // Menampilkan nama pengguna dan nomor rekening di Page Profile
+        TextView namaTextView = findViewById(R.id.namaTextView);
+        TextView rekeningTextView = findViewById(R.id.rekeningTextView);
+
+        user = databaseHelper.getUser();
+
+        // Tampilkan Data berdasarkan user yang login
+        if (user != null){
+            namaTextView.setText(user.getUsername());
+            rekeningTextView.setText(user.getNorek());
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
